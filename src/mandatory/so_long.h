@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/05 15:15:12 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/05 16:11:23 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,17 @@ typedef struct s_game
 	void	*mlx;
 	void	*mlx_win;
 }				t_game;
+
+//! parsing_objects.c
+int	check_map_player(t_game *game);
+int	check_map_exit(t_game *game);
+int	check_map_coins(t_game *game);
+int	check_map_other_chars(t_game *game);
+
+//! parsing_struct.c
+int	check_map_file(char *map_file);
+int	check_map_border(t_game *game);
+int	check_map_width(t_game *game);
+int	check_map(t_game *game);
 
 #endif

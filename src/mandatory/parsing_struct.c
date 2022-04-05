@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:16:26 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/05 15:14:13 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/05 16:11:13 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int	check_map_width(t_game *game)
 	return (1);
 }
 
-int	validate_map(t_game *game)
+int	check_map(t_game *game)
 {
 	if (!game)
 		got_error_game_is_null();
