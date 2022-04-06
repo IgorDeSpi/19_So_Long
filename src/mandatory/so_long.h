@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/05 16:11:23 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:52:27 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,19 @@ int	check_map_file(char *map_file);
 int	check_map_border(t_game *game);
 int	check_map_width(t_game *game);
 int	check_map(t_game *game);
+
+//! errors_1to5.c
+void	got_error_map_not_found(void);
+void	got_error_map_not_valid(void);
+void	got_error_map_width(void);
+void	got_error_map_border(void);
+void	got_error_map_player(void);
+
+//! errors_6to10.c
+void	got_error_map_exit(void);
+void	got_error_map_coins(void);
+void	got_error_map_forbidden_item(void);
+void	got_error_map_not_ber_extension(void);
+void	got_error_game_is_null(void);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:16:26 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/05 16:11:13 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/06 11:51:06 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	check_map(t_game *game)
 	if (!check_map_exit(game))
 		got_error_map_exit();
 	if (!check_map_coins(game))
-		return (0);
+		got_error_map_coins();
 	if (!check_map_other_chars(game))
 		got_error_map_forbidden_item();
 	return (1);
