@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:15:47 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/06 13:36:53 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/06 17:47:18 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	free_game(t_game **game)
 	free((*game)->map);
 	free(*game);
 	*game = NULL;
-	return (game);
+	return (0);
 }
 
 int	init_map(char *map_path, t_game *game)
@@ -66,7 +66,7 @@ int	init_map(char *map_path, t_game *game)
 	game->height = height;
 	if (game->map)
 		game->width = ft_strlen(game->map[i - 1]);
-	if (!game->map || check_map(game))
+	if (!game->map || !check_map(game))
 		return (free_game(&game));
 	return (1);
 }

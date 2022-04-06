@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/06 15:00:19 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/06 17:50:40 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@
 # include "../libft/libft.h"
 # include "./gnl/get_next_line.h"
 # define BLOCK_SIZE 80
-# define BUFFER_SIZE 1
+# define BUFFER_SIZE 1024
 
 //! IMG path
-# define PLAYER "img/mario.xpm"
-# define WALL "img/cloud.xpm"
-# define COIN "img/coin.xpm"
-# define BG "img/floor.xpm"
-# define EXIT_OPEN "img/exit_open.xpm"
-# define EXIT_CLOSED "img/exit_closed.xpm"
+# define PLAYER "xpm/p.xpm"
+# define WALL "xpm/1.xpm"
+# define COIN "xpm/c-4.xpm"
+# define BG "xpm/0.xpm"
+# define EXIT_OPEN "xpm/e_o.xpm"
+# define EXIT_CLOSED "xpm/e_c.xpm"
 
 //! Event keys codes
 # define KEY_UP 126

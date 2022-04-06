@@ -6,7 +6,7 @@
 #    By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/10 12:32:13 by ide-spir          #+#    #+#              #
-#    Updated: 2022/01/19 11:48:21 by ide-spir         ###   ########.fr        #
+#    Updated: 2022/04/06 17:22:30 by ide-spir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,23 +87,19 @@ HEADER = -I ./includes
 .c.o:
 	@${CC} ${CFLAGS} ${HEADER} -c $< -o ${<:.c=.o}
 
-$(NAME): ${OBJS}
-	@ar rc ${NAME} ${OBJS}
-	@echo "Libft.a created"
+$(NAME): ${OBJS} ${OBJS_BONUS}
+	@ar rc ${NAME} ${OBJS} ${OBJS_BONUS}
 
 bonus: ${OBJS_BONUS}
 	@ar rc $(NAME) $(OBJS_BONUS)
-	@echo "Bonus added to Libft.a"
 
 all: ${NAME}
 
 clean:
-	@${RM} ${OBJS}
-	@echo "All .o deleted"
+	@${RM} ${OBJS} ${OBJS_BONUS}
 
 fclean: clean
 	@${RM} ${NAME} ${OBJS_BONUS}
-	@echo "Libft.a deleted"
 
 re: fclean all
 

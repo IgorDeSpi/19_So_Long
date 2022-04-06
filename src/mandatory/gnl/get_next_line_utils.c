@@ -6,13 +6,13 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:48:48 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/21 14:55:08 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/06 16:07:39 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen_gnl(const char *s)
 {
 	size_t	i;
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr_gnl(char *s, int c)
 {
 	int	i;
 
@@ -40,7 +40,7 @@ char	*ft_strchr(char *s, int c)
 	return (0);
 }
 
-char	*ft_strjoin(char *backup, char *buffer)
+char	*ft_strjoin_gnl(char *backup, char *buffer)
 {
 	size_t	i;
 	size_t	j;
@@ -53,7 +53,8 @@ char	*ft_strjoin(char *backup, char *buffer)
 	}
 	if (!backup || !buffer)
 		return (NULL);
-	str = malloc(sizeof(char) * ((ft_strlen(backup) + ft_strlen(buffer)) + 1));
+	str = malloc(sizeof(char) * \
+	((ft_strlen_gnl(backup) + ft_strlen_gnl(buffer)) + 1));
 	if (!str)
 		return (NULL);
 	i = -1;
@@ -63,7 +64,7 @@ char	*ft_strjoin(char *backup, char *buffer)
 			str[i] = backup[i];
 	while (buffer[j] != '\0')
 		str[i++] = buffer[j++];
-	str[ft_strlen(backup) + ft_strlen(buffer)] = '\0';
+	str[ft_strlen_gnl(backup) + ft_strlen_gnl(buffer)] = '\0';
 	free(backup);
 	return (str);
 }
@@ -110,7 +111,7 @@ char	*ft_backup(char *backup)
 		free(backup);
 		return (NULL);
 	}
-	str = (char *)malloc(sizeof(char) * (ft_strlen(backup) - i + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen_gnl(backup) - i + 1));
 	if (!str)
 		return (NULL);
 	i++;

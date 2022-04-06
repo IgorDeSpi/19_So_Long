@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:48:27 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/02/28 11:15:58 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/06 16:06:23 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_read_to_backup(int fd, char *backup)
 	if (!buffer)
 		return (NULL);
 	bytes = 1;
-	while (!ft_strchr(backup, '\n') && bytes != 0)
+	while (!ft_strchr_gnl(backup, '\n') && bytes != 0)
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes == -1)
@@ -30,7 +30,7 @@ char	*ft_read_to_backup(int fd, char *backup)
 			return (NULL);
 		}
 		buffer[bytes] = '\0';
-		backup = ft_strjoin(backup, buffer);
+		backup = ft_strjoin_gnl(backup, buffer);
 	}
 	free(buffer);
 	return (backup);
