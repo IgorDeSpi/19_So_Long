@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/06 11:52:27 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/06 15:00:19 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <fcntl.h>
 # include "../libft/libft.h"
 # include "./gnl/get_next_line.h"
+# define BLOCK_SIZE 80
+# define BUFFER_SIZE 1
 
 //! IMG path
 # define PLAYER "img/mario.xpm"
@@ -65,16 +67,16 @@ typedef struct s_game
 }				t_game;
 
 //! parsing_objects.c
-int	check_map_player(t_game *game);
-int	check_map_exit(t_game *game);
-int	check_map_coins(t_game *game);
-int	check_map_other_chars(t_game *game);
+int		check_map_player(t_game *game);
+int		check_map_exit(t_game *game);
+int		check_map_coins(t_game *game);
+int		check_map_other_chars(t_game *game);
 
 //! parsing_struct.c
-int	check_map_file(char *map_file);
-int	check_map_border(t_game *game);
-int	check_map_width(t_game *game);
-int	check_map(t_game *game);
+int		check_map_file(char *map_file);
+int		check_map_border(t_game *game);
+int		check_map_width(t_game *game);
+int		check_map(t_game *game);
 
 //! errors_1to5.c
 void	got_error_map_not_found(void);
@@ -89,5 +91,25 @@ void	got_error_map_coins(void);
 void	got_error_map_forbidden_item(void);
 void	got_error_map_not_ber_extension(void);
 void	got_error_game_is_null(void);
+
+//! init.c
+int		count_height(int fd);
+int		free_game(t_game **game);
+int		init_map(char *map_path, t_game *game);
+t_game	*init_game(char *map_path);
+
+//! movements.c
+int		can_move(t_game *game, int direction);
+void	move_player(t_game *game);
+
+//! hooks.c
+int		move_hook(t_game *game, int keycode);
+int		hooks(int keycode, t_game *game);
+int		destroy_hook(t_game *game);
+
+//! draw_map.c
+void	draw_img_block(t_game *game, char c, int x, int y);
+void	draw_map(t_game *game);
+void	close_game(t_game *game);
 
 #endif
