@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:41:41 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/06 14:59:38 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/07 11:26:18 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	can_move(t_game *game, int direction)
 		j = -1;
 	if (direction == KEY_RIGHT || direction == D_RIGHT)
 		j = 1;
-	if (game->map[game->p_y + 1][game->p_x + 1] == '1')
+	if (game->map[game->p_y + i][game->p_x + j] == '1')
 		return (0);
-	if (game->map[game->p_y + 1][game->p_x + 1] == 'E')
+	if (game->map[game->p_y + i][game->p_x + j] == 'E')
 		if (game->nbr_coins)
 			return (0);
 	game->map[game->p_y][game->p_x] = '0';
