@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/16 14:47:30 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/16 15:40:13 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include "../libft/libft.h"
-# include "./gnl/get_next_line.h"
+# include "./gnl/get_next_line_bonus.h"
 # define BLOCK_SIZE 32
 # define BUFFER_SIZE 1024
 
@@ -28,6 +28,7 @@
 # define BG "img/background.xpm"
 # define EXIT_OPEN "img/exit_open.xpm"
 # define EXIT_CLOSED "img/exit_closed.xpm"
+# define ENEMY "img/bowser.xpm"
 
 //! Event keys codes
 # define KEY_UP 126
@@ -56,6 +57,13 @@ typedef struct s_game
 {
 	char	**map;
 	int		game;
+	int		c_i;
+	int		c_i_direction;
+	int		enemy_xpm_index;
+	int		enemy_xpm_direction;
+	int		enemy_xpm_exist;
+	int		e_x;
+	int		e_y;
 	int		count_move;
 	int		height;
 	int		width;
