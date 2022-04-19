@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/19 13:27:16 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:59:44 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,7 @@ int		count_height(int fd);
 int		free_game(t_game **game);
 int		init_map(char *map_path, t_game *game);
 t_game	*init_game(char *map_path);
+void	init_enemy(t_game *game);
 
 //! movements.c
 int		can_move(t_game *game, int direction);
@@ -114,10 +115,17 @@ void	move_player(t_game *game);
 int		move_hook(t_game *game, int keycode);
 int		hooks(int keycode, t_game *game);
 int		destroy_hook(t_game *game);
+int		move_enemy_hook(t_game *game, int keycode);
 
 //! draw_map.c
 void	draw_img_block(t_game *game, char c, int x, int y);
 void	draw_map(t_game *game);
 void	close_game(t_game *game);
+
+//! loops_bonus.c
+void	animate_coin(int frames, t_game *game);
+void	animate_enemy(int frames, t_game *game);
+int		loops(t_game *game);
+int		create_trgb(int t, int r, int g, int b);
 
 #endif

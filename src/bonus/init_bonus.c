@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:15:47 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/19 13:30:26 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 14:12:31 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,11 +89,11 @@ t_game	*init_game(char *map_path)
 	if (!init_map(map_path, game))
 		game = NULL;
 	else
-		set_init_enemy(game);
+		init_enemy(game);
 	return (game);
 }
 
-void	set_init_enemy(t_game *game)
+void	init_enemy(t_game *game)
 {
 	int	i;
 	int	j;

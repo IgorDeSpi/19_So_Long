@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:41:41 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/19 13:31:26 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 14:11:43 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,48 @@ void	move_player(t_game *game)
 		ft_putchar_fd('\n', 1);
 		draw_map(game);
 	}
+}
+
+int	can_move_enemy(t_game *game, int direction)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	if (direction == KEY_UP)
+		i = -1;
+	if (direction == KEY_DOWN)
+		i = 1;
+	if (direction == KEY_LEFT)
+		j = -1;
+	if (direction == KEY_RIGHT)
+		j = 1;
+	if (game->map[game->e_y + i][game->e_x + j] == '1')
+		return (0);
+	if (game->map[game->e_y + i][game->e_x + j] == 'C')
+		return (0);
+	if (game->map[game->e_y + i][game->e_x + j] == 'E')
+		return (0);
+	return (0);
+}
+
+void	move_enemy(t_game *game, int direction)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	if (direction == KEY_UP)
+		i = -1;
+	if (direction == KEY_DOWN)
+		i = 1;
+	if (direction == KEY_LEFT)
+		j = -1;
+	if (direction == KEY_RIGHT)
+		j = 1;
+	game->map[game->e_y][game->e_x] = '0';
+	game->e_y += i;
+	game->e_x += j;
 }
