@@ -6,12 +6,12 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/16 15:40:13 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:27:16 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 
 # include <mlx.h>
 # include <stdio.h>
@@ -60,8 +60,8 @@ typedef struct s_game
 	int		c_i;
 	int		c_i_direction;
 	int		enemy_xpm_index;
-	int		enemy_xpm_direction;
-	int		enemy_xpm_exist;
+	int		enemy_xpm_index_direction;
+	int		enemy_exist;
 	int		e_x;
 	int		e_y;
 	int		count_move;

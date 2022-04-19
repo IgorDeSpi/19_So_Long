@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 11:09:10 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/16 14:46:34 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:30:59 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 void	got_error_map_not_found(void)
 {

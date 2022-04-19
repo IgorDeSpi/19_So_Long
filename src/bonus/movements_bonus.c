@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:41:41 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/16 14:47:15 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:31:26 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int	can_move(t_game *game, int direction)
 {

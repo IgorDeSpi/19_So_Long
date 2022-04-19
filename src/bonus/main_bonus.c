@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 11:09:59 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/16 14:47:06 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:31:21 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int	main(int argc, char **argv)
 {

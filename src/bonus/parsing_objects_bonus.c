@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 15:49:08 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/16 14:47:20 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:31:35 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int	check_map_player(t_game *game)
 {

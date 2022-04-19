@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:39:38 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/16 14:46:53 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:30:45 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int	move_hook(t_game *game, int keycode)
 {
@@ -39,4 +39,12 @@ int	destroy_hook(t_game *game)
 {
 	close_game(game);
 	return (0);
+}
+
+int	move_enemy_hook(t_game *game, int keycode)
+{
+	if (!can_move_enemy(game, keycode))
+		return (0);
+	move_enemy(game, keycode);
+	return (1);
 }

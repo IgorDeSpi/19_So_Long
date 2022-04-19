@@ -6,11 +6,11 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:15:47 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/16 14:47:01 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/19 13:30:26 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 
 int	count_height(int fd)
 {
@@ -81,8 +81,39 @@ t_game	*init_game(char *map_path)
 	if (!game)
 		got_error_game_is_null();
 	game->count_move = 0;
+	game->c_i = 0;
+	game->c_i_direction = 0;
+	game->enemy_xpm_index = 0;
+	game->enemy_xpm_index_direction = 0;
 	game->game = 1;
 	if (!init_map(map_path, game))
 		game = NULL;
+	else
+		set_init_enemy(game);
 	return (game);
+}
+
+void	set_init_enemy(t_game *game)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = -1;
+	game->enemy_exist = 0;
+	while (++i < game->height - 1)
+	{
+		if (game->enemy_exist)
+			break ;
+		while (++j < game->width - 1)
+		{
+			if (game->map[i][j] == '0')
+			{
+				game->enemy_exist = 1;
+				game->e_x = j;
+				game->e_y = i;
+				break ;
+			}
+		}
+	}
 }
