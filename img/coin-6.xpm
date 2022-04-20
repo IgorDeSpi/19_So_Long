@@ -1,5 +1,5 @@
 /* XPM */
-static char *ba5c0c2bfb0f413ab82e9302d78fdb2dveKHuJQAq7w11H0K[] = {
+static char *_3b893f4d4be4afcbfa222e58ccb244flVmSpcbXUGDY3LmQ[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 4 1 ",
 "  c None",
@@ -7,9 +7,6 @@ static char *ba5c0c2bfb0f413ab82e9302d78fdb2dveKHuJQAq7w11H0K[] = {
 "X c #BA6111",
 "o c #FFAA47",
 /* pixels */
-"                                ",
-"                                ",
-"                                ",
 "                                ",
 "                                ",
 "                                ",
@@ -38,5 +35,8 @@ static char *ba5c0c2bfb0f413ab82e9302d78fdb2dveKHuJQAq7w11H0K[] = {
 "            ooXX..              ",
 "            ooXX..              ",
 "            ooXX..              ",
-"             oXX.               "
+"             oXX.               ",
+"                                ",
+"                                ",
+"                                "
 };

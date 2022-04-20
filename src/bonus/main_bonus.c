@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 11:09:59 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/19 15:10:08 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/20 14:22:45 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int argc, char **argv)
 	draw_map(game);
 	mlx_hook(game->mlx_win, 2, 1L << 0, hooks, game);
 	mlx_hook(game->mlx_win, 17, 1L << 0, destroy_hook, game);
+	mlx_loop_hook(game->mlx, loops, game);
 	mlx_loop(game->mlx);
 	free(game->mlx_win);
 	free(game->mlx);

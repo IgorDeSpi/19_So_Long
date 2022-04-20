@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 11:09:59 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/06 17:38:56 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/20 15:18:52 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ int	main(int argc, char **argv)
 		got_error_map_not_found();
 	game = init_game(argv[1]);
 	if (!game || !game->map)
-	{
-		printf("ICI2\n");
 		got_error_game_is_null();
-	}
 	width = game->width * BLOCK_SIZE;
 	height = game->height * BLOCK_SIZE;
 	game->mlx = mlx_init();

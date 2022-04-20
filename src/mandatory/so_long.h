@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/20 13:33:12 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/20 15:19:39 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 //! IMG path
 # define PLAYER "img/mario.xpm"
 # define WALL "img/wall.xpm"
-# define COIN "img/coin_0.xpm"
+# define COIN "img/coin-4.xpm"
 # define BG "img/background.xpm"
 # define EXIT_OPEN "img/exit_open.xpm"
 # define EXIT_CLOSED "img/exit_closed.xpm"
