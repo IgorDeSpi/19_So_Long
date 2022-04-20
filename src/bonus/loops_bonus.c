@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 13:40:21 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/19 15:37:31 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/20 13:48:07 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	animate_coin(int frames, t_game *game)
 	{
 		if (game->c_i_direction)
 		{
-			if (game->c_i == 6)
+			if (game->c_i == 3)
 			{
 				game->c_i--;
 				game->c_i_direction = 0;

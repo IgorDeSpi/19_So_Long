@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 14:34:15 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/19 15:38:37 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/20 14:04:59 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	draw_img_block(t_game *game, char c, int x, int y)
 	if (c == '1')
 		file = ft_strdup(WALL);
 	if (c == 'C')
-		file = ft_strdup(COIN);
+		file = get_file(COIN, game->c_i);
 	if (c == 'E' && game->nbr_coins != 0)
 		file = ft_strdup(EXIT_CLOSED);
 	if (c == 'E' && game->nbr_coins == 0)
@@ -57,8 +57,8 @@ void	draw_map(t_game *game)
 			draw_img_block(game, game->map[i][j], j, i);
 	}
 	str = ft_itoa(game->count_move);
-	c = create_trgb(1, 0, 255, 0);
-	mlx_string_put(game->mlx, game->mlx_win, 0, 0, c, "moves : ");
+	c = create_trgb(1, 255, 0, 0);
+	mlx_string_put(game->mlx, game->mlx_win, 10, 0, c, "Moves : ");
 	mlx_string_put(game->mlx, game->mlx_win, 100, 0, c, str);
 	free(str);
 }
@@ -92,7 +92,7 @@ void	draw_enemy_block(t_game *game)
 
 	if (game->enemy_exist)
 	{
-		file = get_file(ENEMY, game->enemy_xpm_index);
+		file = ft_strdup(ENEMY);
 		img = mlx_xpm_file_to_image(game->mlx, file, &width, &height);
 		if (!img)
 			got_error_map_not_found();
