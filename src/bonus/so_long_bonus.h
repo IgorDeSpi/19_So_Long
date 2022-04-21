@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/20 13:51:49 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 10:21:23 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define BG "img/background.xpm"
 # define EXIT_OPEN "img/exit_open.xpm"
 # define EXIT_CLOSED "img/exit_closed.xpm"
-# define ENEMY "img/bowser.xpm"
+# define ENEMY "img/bowser-"
 
 //! Event keys codes
 # define KEY_UP 126

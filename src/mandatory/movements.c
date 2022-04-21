@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:41:41 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/07 11:26:18 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 10:42:59 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,16 @@ void	move_player(t_game *game)
 	if (game->map[game->p_y][game->p_x] == 'E')
 	{
 		if (game->nbr_coins == 0)
+		{
+			ft_putstr_fd("GG \n", 1);
 			close_game(game);
+		}
 	}
 	game->map[game->p_y][game->p_x] = 'P';
 	if (game->game)
 	{
 		game->count_move++;
-		ft_putstr_fd("moves : ", 1);
+		ft_putstr_fd("Moves : ", 1);
 		ft_putnbr_fd(game->count_move, 1);
 		ft_putchar_fd('\n', 1);
 		draw_map(game);

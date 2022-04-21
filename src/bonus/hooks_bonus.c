@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:39:38 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/19 13:30:45 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 10:49:41 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int	hooks(int keycode, t_game *game)
 {
 	if (keycode == KEY_ESC)
 		close_game(game);
-	if ((keycode == KEY_DOWN || keycode == S_DOWN) && game->game)
+	if ((keycode == S_DOWN) && game->game)
 		move_hook(game, keycode);
-	if ((keycode == KEY_UP || keycode == W_UP) && game->game)
+	if ((keycode == W_UP) && game->game)
 		move_hook(game, keycode);
-	if ((keycode == KEY_LEFT || keycode == A_LEFT) && game->game)
+	if ((keycode == A_LEFT) && game->game)
 		move_hook(game, keycode);
-	if ((keycode == KEY_RIGHT || keycode == D_RIGHT) && game->game)
+	if ((keycode == D_RIGHT) && game->game)
 		move_hook(game, keycode);
 	return (0);
 }

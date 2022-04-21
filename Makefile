@@ -6,7 +6,7 @@
 #    By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/24 11:09:30 by ide-spir          #+#    #+#              #
-#    Updated: 2022/04/20 11:20:26 by ide-spir         ###   ########.fr        #
+#    Updated: 2022/04/21 10:36:13 by ide-spir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,8 @@ fclean : clean
 	@rm -f $(NAME)
 
 re : fclean all
+
+re_bonus : fclean bonus
 
 bonus: $(LIBFT) $(OBJS_B)
 	@$(CC) $(FLAGS) -lmlx -framework OpenGL -framework AppKit $(LIBFT) $(OBJS_B) -o $(NAME) $(LIBFT)
