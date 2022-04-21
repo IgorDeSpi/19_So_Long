@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 13:40:21 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/21 10:36:54 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:23:24 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,7 @@ int	loops(t_game *game)
 			if (rand % 5 == 3)
 				move_enemy_hook(game, KEY_RIGHT);
 			if (game->e_x == game->p_x && game->e_y == game->p_y)
-			{
-				ft_putstr_fd("GAME OVER\n", 1);
 				close_game(game);
-			}
 		}
 		frames++;
 		rand *= 13;

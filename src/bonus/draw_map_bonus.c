@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 14:34:15 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/21 10:52:05 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:24:46 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,7 @@ void	draw_map(t_game *game)
 
 void	close_game(t_game *game)
 {
+	ft_putstr_fd("GAME OVER\n", 1);
 	mlx_destroy_window(game->mlx, game->mlx_win);
 	exit(0);
 }
@@ -95,10 +96,7 @@ void	draw_enemy_block(t_game *game)
 		file = get_file(ENEMY, game->enemy_xpm_index);
 		img = mlx_xpm_file_to_image(game->mlx, file, &width, &height);
 		if (!img)
-		{
-			printf("ICI \n");
 			got_error_map_not_found();
-		}
 		width = BLOCK_SIZE * game->e_x;
 		height = BLOCK_SIZE * game->e_y;
 		mlx_put_image_to_window(game->mlx, game->mlx_win, img, width, height);

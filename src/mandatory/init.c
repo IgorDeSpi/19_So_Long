@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:15:47 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/20 15:18:00 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:22:06 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	init_map(char *map_path, t_game *game)
 	height = 0;
 	fd = open(map_path, O_RDONLY);
 	if (fd < 0)
-			got_error_map_not_found();
+		got_error_map_not_found();
 	height = count_height(fd);
 	if (height == 0)
 		got_error_map_not_valid();

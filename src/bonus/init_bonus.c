@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 13:15:47 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/19 14:12:31 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:21:29 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,9 +99,9 @@ void	init_enemy(t_game *game)
 	int	j;
 
 	i = 0;
-	j = -1;
+	j = 0;
 	game->enemy_exist = 0;
-	while (++i < game->height - 1)
+	while (++i < game->height -1)
 	{
 		if (game->enemy_exist)
 			break ;
@@ -115,5 +115,6 @@ void	init_enemy(t_game *game)
 				break ;
 			}
 		}
+		j = 0;
 	}
 }
