@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/19 13:40:21 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/21 13:23:24 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:54:19 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,16 +80,12 @@ int	loops(t_game *game)
 		animate_enemy(frames, game);
 		if (game->enemy_exist && game->game && frames % 1000 == 0)
 		{
-			if (rand % 5 == 0)
-				move_enemy_hook(game, KEY_UP);
-			if (rand % 5 == 1)
-				move_enemy_hook(game, KEY_DOWN);
-			if (rand % 5 == 2)
-				move_enemy_hook(game, KEY_LEFT);
-			if (rand % 5 == 3)
-				move_enemy_hook(game, KEY_RIGHT);
+			check_rand(game, rand % 5);
 			if (game->e_x == game->p_x && game->e_y == game->p_y)
+			{
+				ft_putstr_fd("GAME OVER\n", 1);
 				close_game(game);
+			}
 		}
 		frames++;
 		rand *= 13;
@@ -100,4 +96,16 @@ int	loops(t_game *game)
 int	create_trgb(int t, int r, int g, int b)
 {
 	return (t << 24 | r << 16 | g << 8 | b);
+}
+
+void	check_rand(t_game *game, int rand)
+{
+	if (rand == 0)
+		move_enemy_hook(game, KEY_UP);
+	if (rand == 1)
+		move_enemy_hook(game, KEY_DOWN);
+	if (rand == 2)
+		move_enemy_hook(game, KEY_LEFT);
+	if (rand == 3)
+		move_enemy_hook(game, KEY_RIGHT);
 }

@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 14:26:50 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/21 10:21:23 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:53:54 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,6 @@ void		animate_coin(int frames, t_game *game);
 void		animate_enemy(int frames, t_game *game);
 int			loops(t_game *game);
 int			create_trgb(int t, int r, int g, int b);
+void		check_rand(t_game *game, int rand);
 
 #endif

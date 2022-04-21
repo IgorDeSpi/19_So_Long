@@ -6,7 +6,7 @@
 /*   By: ide-spir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 14:34:15 by ide-spir          #+#    #+#             */
-/*   Updated: 2022/04/21 13:24:46 by ide-spir         ###   ########.fr       */
+/*   Updated: 2022/04/21 13:42:01 by ide-spir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	draw_map(t_game *game)
 
 void	close_game(t_game *game)
 {
-	ft_putstr_fd("GAME OVER\n", 1);
 	mlx_destroy_window(game->mlx, game->mlx_win);
 	exit(0);
 }
