@@ -11,4 +11,6 @@ The aim of the bonus part was to code an enemy that can kill you if you encounte
 
 [Here](https://github.com/IgorDeSpi/19_So_Long/blob/main/img%20with%20bg/level1.mov) you can find a video to download with the final result of the project
 
-Project finished 125%
+
+## Result
+Project finished with 125%
